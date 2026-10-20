@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escape the Dark</title>
-    <script type="module" crossorigin src="./assets/index-BdJIXrXK.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-s8pYE2df.css">
+    <script type="module" crossorigin src="./assets/index-DPCQdlaX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CSLs74LF.css">
   </head>
   <body>
     <div id="game"></div>
 
+    <div id="hide-view" class="hidden"></div>
     <div id="scare-flash"></div>
 
     <div id="hud">
@@ -21,6 +22,7 @@
         <div>Repellent <kbd>Q</kbd>: <span id="repellent-count">0</span></div>
         <div>Speed boost <kbd>F</kbd>: <span id="boost-count">0</span></div>
       </div>
+      <div id="breath" class="hidden">Breath <span class="bar"><span id="breath-fill"></span></span></div>
     </div>
 
     <div id="start-screen" class="overlay">
@@ -31,6 +33,7 @@
         <li><kbd>Shift</kbd> sneak (slow, silent)</li>
         <li><kbd>Mouse</kbd> look around</li>
         <li><kbd>E</kbd> pick up / search / use</li>
+        <li><kbd>H</kbd> hide in a wardrobe, under a bed, or behind a bathtub</li>
         <li><kbd>Q</kbd> spray clown repellent (when it's close)</li>
         <li><kbd>F</kbd> drink speed boost</li>
         <li><kbd>Esc</kbd> pause</li>
