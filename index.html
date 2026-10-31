@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Escape the Dark</title>
-    <script type="module" crossorigin src="./assets/index-DPCQdlaX.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CSLs74LF.css">
+    <title>The Marlow House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/index-CnI3_D-y.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-oasbwZNP.css">
   </head>
   <body>
     <div id="game"></div>
 
-    <div id="hide-view" class="hidden"></div>
+    <div id="hide-view" class="hidden"><div class="panel-a"></div><div class="panel-b"></div></div>
     <div id="scare-flash"></div>
 
     <div id="hud">
@@ -23,11 +26,28 @@
         <div>Speed boost <kbd>F</kbd>: <span id="boost-count">0</span></div>
       </div>
       <div id="breath" class="hidden">Breath <span class="bar"><span id="breath-fill"></span></span></div>
+      <div id="control-hints">
+        <span><kbd>WASD</kbd> move</span>
+        <span><kbd>Shift</kbd> sneak</span>
+        <span><kbd>Mouse</kbd> look</span>
+        <span><kbd>E</kbd> use</span>
+        <span><kbd>H</kbd> hide</span>
+        <span><kbd>Q</kbd> spray</span>
+        <span><kbd>F</kbd> boost</span>
+        <span><kbd>Esc</kbd> pause</span>
+      </div>
     </div>
 
-    <div id="start-screen" class="overlay">
-      <h1>Escape the Dark</h1>
-      <p>You wake up alone in an abandoned house. Search the furniture for the 3 keys that unlock the exit. Watch your step, and keep quiet. Something in here can hear you.</p>
+    <div id="story-screen" class="overlay">
+      <div class="story-text"></div>
+      <p class="story-skip">Click or press any key to skip</p>
+      <button class="story-continue hidden">Continue</button>
+    </div>
+
+    <div id="start-screen" class="overlay hidden">
+      <h1>The Marlow House</h1>
+      <p class="tagline">Three keys. One way out.</p>
+      <p>Search the furniture for the 3 keys that unlock the exit. Watch your step, and keep quiet. It can hear you.</p>
       <ul class="controls">
         <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move</li>
         <li><kbd>Shift</kbd> sneak (slow, silent)</li>
