@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/index-Bh4YbhBi.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BwuTY-BF.css">
+    <script type="module" crossorigin src="./assets/index-O1j0Sado.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BC6_r88q.css">
   </head>
   <body>
     <div id="game"></div>
@@ -25,6 +25,11 @@
         <div>Keys: <span id="key-status">0 / 3</span></div>
         <div>Repellent <kbd>Q</kbd>: <span id="repellent-count">0</span></div>
         <div>Speed boost <kbd>F</kbd>: <span id="boost-count">0</span></div>
+      </div>
+      <div id="tutorial-panel" class="hidden">
+        <p class="tutorial-step"></p>
+        <ol class="tutorial-tasks"></ol>
+        <ul class="tutorial-tips"></ul>
       </div>
       <div id="breath" class="hidden">Breath <span class="bar"><span id="breath-fill"></span></span></div>
       <div id="control-hints">
@@ -46,9 +51,9 @@
     </div>
 
     <div id="start-screen" class="overlay hidden">
-      <h1>The Marlow House</h1>
-      <p class="tagline">Three keys. One way out.</p>
-      <p>Search the furniture for the 3 keys that unlock the exit. Watch your step, and keep quiet. It can hear you.</p>
+      <h1 id="start-title">The Marlow House</h1>
+      <p class="tagline" id="start-tagline">Three keys. One way out.</p>
+      <p id="start-goal">Search the furniture for the 3 keys that unlock the exit. Watch your step, and keep quiet. It can hear you.</p>
       <ul class="controls">
         <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move</li>
         <li><kbd>Shift</kbd> sneak (slow, silent)</li>
@@ -59,13 +64,18 @@
         <li><kbd>F</kbd> drink speed boost</li>
         <li><kbd>Esc</kbd> pause</li>
       </ul>
-      <button id="start-button">Click to start</button>
+      <div class="buttons">
+        <button id="start-button">Click to start</button>
+        <button id="tutorial-button" class="secondary">First time? Play the tutorial</button>
+        <button id="leave-tutorial-button" class="secondary hidden">Skip to the real game</button>
+      </div>
       <p class="lock-error hidden">Your browser would not let the game capture the mouse. Click inside the page and try again, or open the game in Chrome, Firefox, or Safari.</p>
     </div>
 
     <div id="pause-screen" class="overlay hidden">
       <h1>Paused</h1>
       <button id="resume-button">Click to resume</button>
+      <button id="pause-leave-tutorial-button" class="secondary hidden">Leave the tutorial</button>
       <p class="lock-error hidden">Your browser would not let the game capture the mouse. Click inside the page and try again, or open the game in Chrome, Firefox, or Safari.</p>
     </div>
 
@@ -77,7 +87,7 @@
     </div>
 
     <div id="win-screen" class="overlay hidden">
-      <h1>You escaped!</h1>
+      <h1 id="win-title">You escaped!</h1>
       <p id="win-time"></p>
       <button id="restart-button">Play again</button>
     </div>
