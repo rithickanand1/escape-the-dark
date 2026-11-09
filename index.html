@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/index-Ycd-3qJd.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BC6_r88q.css">
+    <script type="module" crossorigin src="./assets/index-kOLi07Vu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DnS_nD5A.css">
   </head>
   <body>
     <div id="game"></div>
@@ -52,8 +52,8 @@
 
     <div id="start-screen" class="overlay hidden">
       <h1 id="start-title">The Marlow House</h1>
-      <p class="tagline" id="start-tagline">Three keys. One way out.</p>
-      <p id="start-goal">Search the furniture for the 3 keys that unlock the exit. Watch your step, and keep quiet. It can hear you.</p>
+      <p class="tagline" id="start-tagline">The third floor. Three keys. One way down.</p>
+      <p id="start-goal">Search the furniture for the 3 keys that unlock the stairway door. Watch your step, and keep quiet. It can hear you.</p>
       <ul class="controls">
         <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move</li>
         <li><kbd>Shift</kbd> sneak (slow, silent)</li>
@@ -68,6 +68,10 @@
         <button id="start-button">Click to start</button>
         <button id="tutorial-button" class="secondary">First time? Play the tutorial</button>
         <button id="leave-tutorial-button" class="secondary hidden">Skip to the real game</button>
+      </div>
+      <div id="floor-picker" class="floor-picker hidden">
+        <p>Start on a floor you have reached:</p>
+        <div class="buttons" id="floor-buttons"></div>
       </div>
       <p class="lock-error hidden">Your browser would not let the game capture the mouse. Click inside the page and try again, or open the game in Chrome, Firefox, or Safari.</p>
     </div>
@@ -89,7 +93,10 @@
     <div id="win-screen" class="overlay hidden">
       <h1 id="win-title">You escaped!</h1>
       <p id="win-time"></p>
-      <button id="restart-button">Play again</button>
+      <div class="buttons">
+        <button id="restart-button">Play again</button>
+        <button id="replay-floor-button" class="secondary hidden">Play this floor again</button>
+      </div>
     </div>
 
   </body>
