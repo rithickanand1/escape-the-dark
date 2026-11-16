@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junkyard Robot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="../assets/index-Ch6zNG4A.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-P2Xu9kJm.js">
+    <link rel="stylesheet" crossorigin href="../assets/index-ofkEQTA3.css">
+  </head>
+  <body>
+    <div id="game"></div>
+
+    <div id="hud" class="hidden">
+      <span>Coins <span id="hud-coins">0</span></span>
+      <span id="hud-time">0:00.0</span>
+    </div>
+
+    <div id="home-screen" class="screen">
+      <a class="arcade-link" href="../">&larr; Arcade Dungeon</a>
+      <h1>Junkyard Robot</h1>
+      <p class="tagline">Run and jump through the junkyard. Grab the coins, mind the gaps, reach the flag.</p>
+      <ul class="controls">
+        <li><kbd>&larr;</kbd><kbd>&rarr;</kbd> or <kbd>A</kbd><kbd>D</kbd> run</li>
+        <li><kbd>Space</kbd>, <kbd>&uarr;</kbd> or <kbd>W</kbd> jump (hold to jump higher)</li>
+      </ul>
+      <button id="start-button">Start</button>
+      <p class="hint">or press Enter</p>
+    </div>
+
+    <div id="complete-screen" class="screen hidden">
+      <h1>Level complete!</h1>
+      <p class="result">Time <span id="result-time"></span></p>
+      <p class="result">Coins <span id="result-coins"></span></p>
+      <div class="buttons">
+        <button id="again-button">Play again</button>
+        <button id="home-button" class="secondary">Home</button>
+      </div>
+      <p class="hint">Enter to play again</p>
+    </div>
+
+  </body>
+</html>
